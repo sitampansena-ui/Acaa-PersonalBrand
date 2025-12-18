@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu Pilihan dengan Function</title>
+</head>
+<body>
+
+<script>
+// FUNCTION 1: KALKULATOR
+function kalkulator() {
+    let a = Number(prompt("Masukkan angka pertama:"));
+    let b = Number(prompt("Masukkan angka kedua:"));
+    let op = prompt("Masukkan operator (+, -, *, /):");
+
+    let hasil;
+
+    if (op === "+") hasil = a + b;
+    else if (op === "-") hasil = a - b;
+    else if (op === "*") hasil = a * b;
+    else if (op === "/") hasil = (b !== 0) ? a / b : "Error: Pembagian dengan 0!";
+    else hasil = "Operator tidak dikenal.";
+
+    alert("Hasil: " + a + " " + op + " " + b + " = " + hasil);
+}
+
+
+// FUNCTION 2: LUAS & KELILING TRAPESIUM
+function trapesium() {
+    let atas = Number(prompt("Masukkan panjang sisi atas:"));
+    let bawah = Number(prompt("Masukkan panjang sisi bawah:"));
+    let tinggi = Number(prompt("Masukkan tinggi trapesium:"));
+    let miring = Number(prompt("Masukkan panjang sisi miring:"));
+
+    let luas = 0.5 * (atas + bawah) * tinggi;
+    let keliling = atas + bawah + 2 * miring;
+
+    let text =
+        "=== HASIL PERHITUNGAN TRAPESIUM ===\n" +
+        "Sisi atas     : " + atas + " cm\n" +
+        "Sisi bawah    : " + bawah + " cm\n" +
+        "Tinggi        : " + tinggi + " cm\n" +
+        "Sisi miring   : " + miring + " cm\n\n" +
+        "Luas          : " + luas + " cm²\n" +
+        "Keliling      : " + keliling + " cm";
+
+    alert(text);
+}
+
+
+// FUNCTION 3: DERET GANJIL HABIS DIBAGI 3
+function deret() {
+    let awal = Number(prompt("Masukkan bilangan awal:"));
+    let akhir = Number(prompt("Masukkan bilangan akhir:"));
+
+    let list = [];
+    let total = 0;
+
+    for (let i = awal; i <= akhir; i++) {
+        if (i % 2 !== 0 && i % 3 === 0) { // ganjil dan habis dibagi 3
+            list.push(i);
+            total += i;
+        }
+    }
+
+    alert(
+        "Bilangan ganjil habis dibagi 3:\n" +
+        list.join(", ") +
+        "\n\nBanyak bilangan: " + list.length +
+        "\nJumlah total: " + total
+    );
+}
+
+
+// MENU UTAMA + LOOPING
+function menu() {
+    let pilih;
+
+    do {
+        pilih = prompt(
+            "-MENU PILIHAN-\n\n" +
+            "1. Menghitung Kalkulator\n" +
+            "2. Menghitung Luas & Keliling Trapesium\n" +
+            "3. Menghitung Deret Bilangan\n" +
+            "0. Keluar\n\n" +
+            "Masukkan pilihan:"
+        );
+
+        switch (pilih) {
+            case "1": kalkulator(); break;
+            case "2": trapesium(); break;
+            case "3": deret(); break;
+            case "0": alert("Program selesai."); break;
+            default: alert("Pilihan tidak valid!");
+        }
+
+    } while (pilih !== "0");
+}
+
+// Jalankan menu
+menu();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulator Prompt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 25px;
+            max-width: 600px;
+            margin: auto;
+            background: #f7f7f7;
+        }
+        .container {
+            background: white;
+            padding: 20px 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            margin-top: 0;
+        }
+        button {
+            padding: 8px 14px;
+            margin: 6px 0;
+            cursor: pointer;
+            border: none;
+            background: #0077ff;
+            color: white;
+            border-radius: 5px;
+        }
+        button:hover {
+            opacity: .85;
+        }
+        #backBtn {
+            background: #666;
+        }
+        #outputBox {
+            margin-top: 15px;
+            background: #f1f1f1;
+            padding: 12px;
+            border-radius: 5px;
+            min-height: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Kalkulator Prompt</h1>
+
+        <button id="backBtn" onclick="window.history.back()">← Kembali</button>
+
+        <p>Tekan tombol di bawah untuk membuka kalkulator prompt.</p>
+
+        <button
+            onclick="
+                let a = Number(prompt('Masukkan angka pertama:'));
+                let b = Number(prompt('Masukkan angka kedua:'));
+                let op = prompt('Masukkan operator (+, -, *, /):');
+
+                let hasil;
+                if (op === '+') hasil = a + b;
+                else if (op === '-') hasil = a - b;
+                else if (op === '*') hasil = a * b;
+                else if (op === '/') hasil = b !== 0 ? a / b : 'Error: Pembagian dengan 0!';
+                else hasil = 'Operator tidak dikenal!';
+
+                document.getElementById('output').innerHTML += 
+                    a + ' ' + op + ' ' + b + ' = ' + hasil + '<br>';
+            "
+        >
+            Mulai Kalkulator
+        </button>
+
+        <h2>Riwayat Perhitungan</h2>
+
+        <div id="outputBox">
+            <div id="output"></div>
+        </div>
+
+    </div>
+
+</body>
+</html>

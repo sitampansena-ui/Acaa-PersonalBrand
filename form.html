@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Registration</title>
+</head>
+
+<body align="center">
+
+    <h2>Formulir Registrasi</h2>
+
+    <form action="#" method="post">
+        <table align="center" cellpadding="8">
+            <tr>
+                <td align="left">Nama Lengkap</td>
+                <td>:</td>
+                <td><input type="text" name="nama"></td>
+            </tr>
+
+            <tr>
+                <td align="left">Alamat</td>
+                <td>:</td>
+                <td><input type="text" name="alamat"></td>
+            </tr>
+
+            <tr>
+                <td align="left">Email</td>
+                <td>:</td>
+                <td><input type="email" name="email"></td>
+            </tr>
+
+            <tr>
+                <td align="left">Jenis Kelamin</td>
+                <td>:</td>
+                <td>
+                    <input type="radio" name="gender" value="Laki-laki"> Laki-laki
+                    <input type="radio" name="gender" value="Perempuan"> Perempuan
+                </td>
+            </tr>
+
+            <tr>
+                <td align="left">Kota</td>
+                <td>:</td>
+                <td>
+                    <select name="kota">
+                        <option value="">-- Pilih Kota --</option>
+                        <option>Jakarta</option>
+                        <option>Bandung</option>
+                        <option>Tangerang</option>
+                        <option>Amsterdam</option>
+                        <option>London</option>
+                        <option>Doppelgangger</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="left" valign="top">Hobi</td>
+                <td valign="top">:</td>
+                <td>
+                    <input type="checkbox" name="hobi[]" value="Membaca"> Membaca<br>
+                    <input type="checkbox" name="hobi[]" value="Menulis"> Menulis<br>
+                    <input type="checkbox" name="hobi[]" value="Melukis"> Melukis<br>
+                    <input type="checkbox" name="hobi[]" value="Main"> Main<br>
+                    <input type="checkbox" name="hobi[]" value="Olahraga"> Olahraga<br>
+                    <input type="checkbox" name="hobi[]" value="Menari"> Menari
+                </td>
+            </tr>
+
+            <tr>
+                <td align="left">Tanggal Lahir</td>
+                <td>:</td>
+                <td><input type="date" name="tgl_lahir"></td>
+            </tr>
+
+            <tr>
+                <td align="left">No Telepon</td>
+                <td>:</td>
+                <td><input type="text" name="notlp"></td>
+            </tr>
+
+            <tr>
+                <td align="left">No Telepon Kerabat</td>
+                <td>:</td>
+                <td><input type="text" name="notlp_kerabat"></td>
+            </tr>
+
+            <tr>
+                <td colspan="3" align="center">
+                    <input type="submit" value="Kirim">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>

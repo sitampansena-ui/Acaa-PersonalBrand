@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="utf-8" /> <!-- menentukan encoding karakter agar teks tampil benar -->
+    <meta name="viewport" content="width=device-width,initial-scale=1" /> <!-- membuat layout responsive di HP/desktop -->
+    <title>Farsya Runa — Home</title> <!-- judul halaman yang muncul di tab browser -->
+    <link rel="stylesheet" href="assets/styles.css" /> <!-- menghubungkan file CSS eksternal -->
+</head>
+<body class="page page-home"> <!-- body = isi utama halaman, diberi class untuk styling -->
+
+  <!-- Bagian Header -->
+  <header class="site-header"> <!-- header = bagian atas website -->
+    <div class="container header-inner"> <!-- div container = pembungkus biar konten center & rapi -->
+      <b><h1 class="brand">Welcome to My Personal Branding</h1></b> <!-- judul / brand website -->
+      <nav class="top-nav"> <!-- nav = menu navigasi -->
+        <a href="index.html" class="nav-link active">Home</a> <!-- link ke home -->
+        <a href="about.html" class="nav-link">About</a> <!-- link ke about -->
+      </nav>
+    </div>
+  </header>
+
+  <!-- Bagian Konten Utama -->
+  <main class="container main-home"> <!-- main = isi utama halaman -->
+    <section class="hero"> <!-- section = blok khusus untuk hero (profil utama) -->
+      
+      <!-- Kolom kiri untuk foto -->
+      <div class="hero-left"> <!-- div = pembungkus elemen agar bisa diatur dengan CSS (flex/grid) -->
+        <img src="assets/runa.jpg" alt="Foto Runa" class="avatar" /> <!-- gambar profil -->
+      </div>
+
+      <!-- Kolom kanan untuk teks -->
+      <div class="hero-right">
+        <h2 class="name">Farsya Runa Supriyatna</h2> <!-- nama -->
+        <p class="role">Mahasiswa Teknik Informatika / Web Developer</p> <!-- jabatan / role -->
+        <p class="about-short"> <!-- paragraf deskripsi singkat -->
+          Seorang mahasiswa semester 5 yang berfokus pada pengembangan web dan UI/UX. 
+          Berpengalaman membangun website interaktif serta terlibat dalam proyek 
+          CloudSync dan keamanan berbasis cloud.
+        </p>
+        <div align="center">
+    <a href="mystory.html">My Story</a> |
+    <a href="https://www.youtube.com/@FarsyaRuna" target="_blank">YouTube</a> |
+    <a href="https://www.instagram.com/frsyrna/?utm_source=ig_web_button_share_sheet" target="_blank">Instagram</a> |
+    <a href="mailto:farsyaruna998@gmail.com">Email</a>
+  </div>
+        <div class="cta-row"> <!-- call to action row (tombol) -->
+          <a class="btn btn-primary" href="about.html">Know More</a> <!-- tombol/link ke halaman about -->
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Bagian Footer -->
+  <footer class="site-footer"> <!-- footer = bagian bawah website -->
+    <div class="container">
+      <small> 2025 Farsya Runa suka Owel</small> <!-- teks kecil untuk copyright -->
+    </div>
+  </footer>
+</body>
+</html>
